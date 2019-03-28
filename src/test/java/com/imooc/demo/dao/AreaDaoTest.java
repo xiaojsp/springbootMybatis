@@ -44,7 +44,7 @@ public class AreaDaoTest {
     }
 
     @Test
-    @Ignore
+    //@Ignore
     public void updateArea() {
         Area area=new Area();
         area.setAreaName("南苑");
