@@ -30,7 +30,7 @@ public class AreaServiceImpl implements AreaService {
     @Transactional
     @Override
     public boolean addArea(Area area) {
-        if(area.getAreaName()!=null &"".equals(area.getAreaName())){
+        if(area.getAreaName() != null && !"".equals(area.getAreaName())){
             area.setCreateTime(new Date());
             area.setLastEditTime(new Date());
             try {
@@ -50,7 +50,7 @@ public class AreaServiceImpl implements AreaService {
 
     @Override
     public boolean modifyArea(Area area) {
-        if(area.getAreaId()!=null & area.getAreaId()>0){
+        if(area.getAreaId() != null && area.getAreaId()>0){
             try {
                 int effectedNum=areaDao.updateArea(area);
                 if(effectedNum > 0){

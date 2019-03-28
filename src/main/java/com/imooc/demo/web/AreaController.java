@@ -33,7 +33,7 @@ public class AreaController {
 
     @RequestMapping(value = "/addarea",method = RequestMethod.POST)
     private Map<String,Object> addArea(@RequestBody Area area){
-        Map<String,Object> modeMap=new HashMap<String, Object>();
+        Map<String,Object> modeMap=new HashMap<>();
         modeMap.put("success",areaService.addArea(area));
         return modeMap;
     }
